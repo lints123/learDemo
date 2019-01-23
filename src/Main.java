@@ -1,5 +1,11 @@
+import IOStream.FileInputStreamOrOutputStream;
+import IOStream.FileReaderOrWriter;
 import RunnableDemo.RunnableA;
 import ThreadDemo.*;
+import com.sun.corba.se.spi.extension.ZeroPortPolicy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -12,11 +18,26 @@ public class Main {
 
         // threadSync1();
 
-        runnableA();
+        // runnableA();
 
         //threadAccount();
 
         //threadABC();
+
+        // -------------------------------------------- 操作IO流
+        FileInputStreamOrOutputStream f = new FileInputStreamOrOutputStream();
+        //f.fileInput();
+        //f.fileInput1();
+
+        FileReaderOrWriter f1 = new FileReaderOrWriter();
+        f1.fileReader();
+
+
+        List<String> list = new ArrayList<>();
+        list.add("123");
+        list.add("456");
+        list.forEach( listsss -> System.out.println(listsss));
+        list.stream().filter(e -> !e.equalsIgnoreCase("123")).forEach( System.out::println);
     }
 
     // 使用join方法
@@ -96,5 +117,7 @@ public class Main {
         tC.start();
         Thread.sleep(1000);
     }
+
+
 
 }
