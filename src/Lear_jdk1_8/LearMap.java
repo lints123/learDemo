@@ -43,13 +43,15 @@ public class LearMap {
         treeMap.put("num1",12);
         treeMap.put("num2",42);
         treeMap.put("num3","zhangsan");
-        treeMap.put("num4","lisi");
+        treeMap.put("num3","lisi");
         treeMap.put("num5","wangwu");
         // treeMap.keySet().forEach(key -> System.out.println("treeMap.get("+key+")，= "+treeMap.get(key)));
-        System.out.println(1<<3);
-        System.out.println(2>>>4);
+        // System.out.println(1<<3);
+        // System.out.println(2>>>4);
 
+        treeMap.keySet().forEach(key -> System.out.println("treeMap.get("+key+"):"+ treeMap.get(key)));
 
+        System.out.println(treeMap.put("num3",123));
         // Java7中，Map是数组加链表
         // Java8中，Map是数组加链表加红黑树
     }
