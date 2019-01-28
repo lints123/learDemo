@@ -33,11 +33,7 @@ public class Main {
         f1.fileReader();
 
 
-        List<String> list = new ArrayList<>();
-        list.add("123");
-        list.add("456");
-        list.forEach( listsss -> System.out.println(listsss));
-        list.stream().filter(e -> !e.equalsIgnoreCase("123")).forEach( System.out::println);
+        
     }
 
     // 使用join方法
