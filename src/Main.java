@@ -5,6 +5,7 @@ import ThreadDemo.*;
 import com.sun.corba.se.spi.extension.ZeroPortPolicy;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -25,15 +26,28 @@ public class Main {
         //threadABC();
 
         // -------------------------------------------- 操作IO流
-        FileInputStreamOrOutputStream f = new FileInputStreamOrOutputStream();
+        // FileInputStreamOrOutputStream f = new FileInputStreamOrOutputStream();
         //f.fileInput();
         //f.fileInput1();
 
-        FileReaderOrWriter f1 = new FileReaderOrWriter();
-        f1.fileReader();
+        // FileReaderOrWriter f1 = new FileReaderOrWriter();
+        // f1.fileReader();
 
-
-        
+        List<String> ll = new ArrayList<>();
+        ll.add("1212");
+        ll.add("45444");
+        Main m = new Main();
+        m.aa(ll);
+        ll.forEach(v ->{
+            if(v.equalsIgnoreCase("5555")){
+                int index = ll.indexOf(v);
+                ll.set(index,"44444");
+            }
+        });
+        ll.forEach(System.out::println);
+    }
+    public void aa(List<String> ll){
+        ll.add("5555");
     }
 
     // 使用join方法
