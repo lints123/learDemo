@@ -3,7 +3,12 @@ import IOStream.FileReaderOrWriter;
 import RunnableDemo.RunnableA;
 import ThreadDemo.*;
 import com.sun.corba.se.spi.extension.ZeroPortPolicy;
+import jdk1_8.User;
 
+import javax.xml.bind.SchemaOutputResolver;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -33,6 +38,9 @@ public class Main {
         // FileReaderOrWriter f1 = new FileReaderOrWriter();
         // f1.fileReader();
 
+
+       /* String str =  "1232";
+        System.out.println(str.hashCode());
         List<String> ll = new ArrayList<>();
         ll.add("1212");
         ll.add("45444");
@@ -44,8 +52,46 @@ public class Main {
                 ll.set(index,"44444");
             }
         });
-        ll.forEach(System.out::println);
+        ll.forEach(System.out::println);*/
+
+       User u  = new User();
+       u.setName("lisi");
+       u.setAge(1212);
+
+       Main m = new Main();
+       m.vvv(u);
+
     }
+
+    // 反射
+    public void vvv(Object object) {
+        String classPatth = String.valueOf(object.getClass());
+        System.out.println(classPatth);
+        String str[] = classPatth.split(" ");
+        System.out.println(str[0]);
+        System.out.println(str[1]);
+        classPatth = str[1];
+        try {
+            Class clazz = Class.forName(classPatth);
+
+            Field[] fields = clazz.getDeclaredFields();
+            for (Field f : fields){
+                //System.out.println(f.getType());
+                System.out.println(f.getName());
+                /*f.setAccessible(true);
+                try {
+                    System.out.println(f.get(object));
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }*/
+            }
+
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void aa(List<String> ll){
         ll.add("5555");
     }
