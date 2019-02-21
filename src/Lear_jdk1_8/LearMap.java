@@ -22,6 +22,8 @@ public class LearMap {
         hashMap.put("张三","12");
         hashMap.put("王五","34");
         hashMap.put("里斯","56");
+        hashMap.put("里斯2","56");
+        hashMap.put("里斯3","56");
         hashMap.put("王伟","90");
         hashMap.put("丁典","110");
 
@@ -38,6 +40,25 @@ public class LearMap {
         // hashMap.values().forEach(System.out::println);
         // 单纯的输出key：里斯
         // hashMap.keySet().forEach(e -> System.out.println(e));
+
+        // 里斯----
+        // 56
+        /*hashMap.entrySet().parallelStream().filter(e -> e.getValue().equals("56")).forEach(e -> {
+            System.out.println(e.getKey()+"----");
+            System.out.println(e.getValue());
+        });
+
+        hashMap.entrySet().stream().filter(e -> e.getValue().equals("56")).forEach(e -> {
+            System.out.println(e.getKey());
+            System.out.println(e.getValue()+"___");
+        });
+        */
+        hashMap.entrySet().stream().forEach(e ->{
+            if(e.getValue().equals("56")){
+                return;
+            }
+            System.out.println(e.getValue()+"_____");
+        });
 
         Map<String,Object> treeMap = new TreeMap<>();
         treeMap.put("num1",12);
