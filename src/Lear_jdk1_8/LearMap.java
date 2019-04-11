@@ -11,7 +11,7 @@ public class LearMap {
         LearMap learMap = new LearMap();
         // learMap.mapSort();
         // learMap.aaa();
-        int result = 0;
+        /*int result = 0;
         List<String> str = new ArrayList<>();
         str.add("111");
         str.add("111");
@@ -21,7 +21,11 @@ public class LearMap {
         str.stream().forEach(e->{
             System.out.println(e);
 
-        });
+        });*/
+        Map<String,Integer> hashMap = new HashMap<>();
+        if(!hashMap.containsKey("1")){
+            System.out.println("1111");
+        }
     }
 
     public void mapSort(){

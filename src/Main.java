@@ -9,9 +9,7 @@ import javax.xml.bind.SchemaOutputResolver;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -54,13 +52,49 @@ public class Main {
         });
         ll.forEach(System.out::println);*/
 
-       User u  = new User();
+  /*     User u  = new User();
        u.setName("lisi");
        u.setAge(1212);
 
        Main m = new Main();
        m.vvv(u);
+*/
+     /*  List<Integer> i = new ArrayList<>();
+       i.add(1);
+       i.add(3);
+        System.out.println(i.size()+"___");
+        System.out.println(i.get(0));
+        System.out.println(i.get(1));*/
+        List<Integer> it = new ArrayList<>();
+        it.add(1);
+        it.add(2);
+        it.add(3);
 
+       /* Map<String, Object> hashmap = new HashMap<>();
+        hashmap.put("1", 1);
+        hashmap.put("2", 22);
+        hashmap.put("3", 33);
+        hashmap.put("4", 44);
+        hashmap.put("5", 55);
+        hashmap.keySet().iterator().forEachRemaining(e -> {
+            if (e.equals("2")) {
+
+            }
+        });
+
+
+            Iterator iterator = hashmap.keySet().iterator();
+            while (iterator.hasNext()){
+                String ee = (String) iterator.next();
+                if(ee.equals("2")){
+                    iterator.remove();
+                    continue;
+                }
+                System.out.println(ee);
+            }
+
+
+        System.out.println(hashmap.toString());*/
     }
 
     // 反射
