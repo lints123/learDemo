@@ -10,7 +10,7 @@ public class LearDate {
     public static void main(String[] args) throws ParseException {
         // plusDay(7,new Date());
         // 设置指定时间
-        String createDate = "2000-01-01 12:39:11";
+      /*  String createDate = "2000-01-01 12:39:11";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = sdf.parse(createDate);
         Calendar cl = Calendar.getInstance();
@@ -20,7 +20,28 @@ public class LearDate {
         System.out.println("时间："+d.getTime());
 
         String enddate = sdf.format(d);
-        System.out.println("增加天数以后的日期：" + enddate);
+        System.out.println("增加天数以后的日期：" + enddate);*/
+
+
+       /* String startTime = "2019-04-16 09:33:00";
+        String endTime = "2019-04-30 23:59:00";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date startDate = sdf.parse(startTime);
+        Date endDate = sdf.parse(endTime);
+
+        long s1 = startDate.getTime();
+        long s2 = endDate.getTime();
+        System.out.println("开始时间 >" +s1);
+        System.out.println("结束时间 >" +s2);
+        Date da = new Date();
+        long daTime = da.getTime();
+        System.out.println("当前时间 >" + daTime);*/
+        Date d = new Date();
+        System.out.println(d.getTime());
+        Date da = new Date(d.getTime() + 3 * 60000);
+        System.out.println(da.getTime());
+        System.out.println(da);
+
     }
 
 
