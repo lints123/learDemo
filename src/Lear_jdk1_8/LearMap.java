@@ -22,10 +22,30 @@ public class LearMap {
             System.out.println(e);
 
         });*/
-        Map<String,Integer> hashMap = new HashMap<>();
+        Map<String,Object> hh = new HashMap<>();
+        hh.put("11",11);
+        System.out.println(hh.get("22"));
+
+        String str = "OD191662910029067";
+        System.out.println(str.contains("OD33"));
+     /*   HashMap<String,String> hashMap = new HashMap<>();
+        hashMap.put("张三","12");
+        hashMap.put("王五","34");
+        hashMap.put("里斯","56");
+        hashMap.put("里斯2","56");
+        hashMap.put("里斯3","56");
+        hashMap.put("王伟","90");
+        hashMap.put("丁典","110");
+        hashMap.entrySet().stream().forEach(e -> {
+            System.out.println(e.getValue()+"__");
+            if(e.getValue().equals("90")){
+                return;
+            }
+        });*/
+       /* Map<String,Integer> hashMap = new HashMap<>();
         if(!hashMap.containsKey("1")){
             System.out.println("1111");
-        }
+        }*/
     }
 
     public void mapSort(){
