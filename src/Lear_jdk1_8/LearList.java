@@ -4,6 +4,7 @@ import com.sun.javafx.scene.layout.region.Margins;
 import com.sun.xml.internal.ws.commons.xmlutil.Converter;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class LearList {
@@ -18,7 +19,10 @@ public class LearList {
         // learList.listSort2();
 
         /** 比较两个循环之间的性能 */
-        learList.controlList();
+        // learList.controlList();
+        List<String> strs = Arrays.asList("1", "2", "33", "0", "6");
+ Optional<String> min = strs.stream().min(Comparator.comparing(Function.identity()));
+        System.out.println(String.format("min:%s", min.get()));// min:a; max:d
     }
 
     // 老版本java排序

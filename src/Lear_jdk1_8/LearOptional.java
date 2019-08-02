@@ -3,16 +3,27 @@ package Lear_jdk1_8;
 import entity.User;
 import jdk.nashorn.internal.runtime.regexp.joni.constants.OPCode;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 public class LearOptional {
 
     public static void main(String[] args) {
 
-        LearOptional ll = new LearOptional();
+      /*  LearOptional ll = new LearOptional();
 
         //ll.test1();
 
+        BigDecimal bigDecimal = BigDecimal.ZERO;
+        ll.aaa(bigDecimal);
+        System.out.println(bigDecimal);*/
+      String str = "[0-9]+";
+      String phone = "123111***21";
+        System.out.println(phone.matches(str));
+
+    }
+    public void aaa(BigDecimal bigDecimal){
+        bigDecimal = new BigDecimal(2);
     }
 
     /* 使用Optional 判断null */

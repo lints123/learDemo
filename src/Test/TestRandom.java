@@ -9,6 +9,15 @@ import java.util.Random;
 public class TestRandom {
     public static void main(String[] args) {
 
+      /*  String ss = "2019-12-22";
+        String ss1 = "2019-12-22";
+        System.out.println(ss.equals(ss1));*/
+        int i = 0;
+        int j = 1;
+        int w = 1;
+        if ( w == i || w==j){
+            System.out.println(111);
+        }
     }
     // 随机数
     public void random(){
